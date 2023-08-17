@@ -1,4 +1,6 @@
-<p align="center"><h1>🫀PREDICTION OF HEART DISEASE USING MACHINE LEARNING:</h1></p>
+<p align="center">
+  <h1><span style="color:red;">🫀</span>PREDICTION OF HEART DISEASE USING MACHINE LEARNING:</h1>
+</p>
 
 
 ### ⚡️INTRODUCTION:
