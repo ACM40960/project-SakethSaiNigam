@@ -10,7 +10,7 @@
 ### 🔎METHEDOLOGY:
 
 <p align="center"><img width="586" alt="dataset pic 1" src="https://github.com/ACM40960/project-diwa13/assets/115154682/ecd197c6-71ff-4b5f-87c0-f9fb5624d817"></p>
-
+<p align="center">FIG : Work Flow </p>
 ➤ We looked at four models to predict cardiac disease using machine learning. To determine whether or not a person has cardiac disease, algorithms like K means, Random Forrest,DNN and logistic regression have been used. All the four models are most effective at forecasting binary outcomes.
 
 ➤ Before modelling the data, we performed exploratory data analysis to identify any discrepancies in the data and apply the appropriate pretreatment measures.
@@ -31,7 +31,7 @@ complete picture or might need for intrusive treatments.
 
 ➤ Furthermore, heart disease sometimes manifests without symptoms or with mild signs, making it challenging to recognise those who are at risk or who are in the early stages of the disease.
 
-### 🚀 WHO MAY UTILISE THIS REPO
+### 🚀 WHO MAY UTILISE THIS REPO:
 
 - **Data scientists and enthusiasts of machine learning:** The repository may be used as a learning tool for data scientists and machine learning professionals. They can examine the source code, comprehend the machine learning process, and use related methods in their own projects.
 - **Healthcare Professionals:** Doctors and medical researchers, among others, can gain from learning how predictive models might help with heart disease diagnosis and prediction. They could be curious about the effectiveness of the approach and how it might affect patient care.
@@ -55,6 +55,7 @@ complete picture or might need for intrusive treatments.
 <p align="center">TABLE : Snapshot of the dataset</p>
 The original data came from the Cleavland data from the UCI Machine Learning Repository. https://archive.ics.uci.edu/ml/datasets/heart+Disease.
 The dataset has the following variables which we are utilizing for heart disease prediction:
+
 1. **age** - age in years
 
 2. **sex** - (1 = male; 0 = female)
@@ -111,15 +112,22 @@ We have a binary classification Problem since we are trying to predict whether o
 Based on this problem Statement we are considering the following models.
 
 - Logistic Regression
+       - Default values in scikit learn has been used as parameters for logistic Regression
 - Random Forrest
+       - Default values in scikit learn has been used as parameters for Random Forrest.
 - k-Nearest Neighbors (k-NN)
-- DNN(Direct Neural Network)
+       - Default values in scikit learn has been used as parameters for K-Nearest Neighbour
+- DNN(Direct Neural Network):
+- A DNN has been constructed with Single hidden layer comprising 16 units has been fitted.
+- Relu has been used as an activation function because ReLU helps mitigate the vanishing gradient problem, which is a challenge in deep networks
+- The output function consists of a single unit and sigmoid is used as an activation function since its a binary classification.
 
 ### ⚙️ Guidelines to run the code:
 
-1. Download Jupyter Notebook to your local machine.
-2. A python version of 3.10.9 is required; if this version is not available, upgrade the python version.
-3. Before running the jupyter notebook make sure to install the following libraries since they have been used for analysis,model implementation,hypeparameter tuning and Evaluation.
+1. Download Jupyter Notebook to your local machine. You can download Anaconda[Anaconda](https://www.anaconda.com/download) and install Jupyter Noebook. 
+2. A python version of 3.10.9 is required; if this version is not available, upgrade the python version. Python can be downloaded from the Link.[Link for downloading Python](https://www.python.org/downloads/)
+3. Download the dataset available in our repository and store it in your local directory where jupyter notebook is running.
+4. Before running the jupyter notebook make sure to install the following libraries since they have been used for analysis,model implementation,hypeparameter tuning and Evaluation.
 
 **Run the following commands for installing the aforementioned libraries**
 
@@ -133,7 +141,7 @@ pip install tensorflow
 ```
 
 4. Run the notebook cells step-by-step to
-      - perform EDA
+      - perform Exploratory Data Analysis.
       - Model Implementation
       - Hyper Parameter Tuning for DNN, KNN, Logistic & Random Forrest.
       - Evaluating the best model beyond accuracy namely Sensitivity, Specificity, Recall, and F-1 score by employing cross-validation.
@@ -147,6 +155,7 @@ pip install tensorflow
 
 <p align="center"><img width="586" alt="dataset pic 1" src="https://github.com/ACM40960/project-diwa13/assets/115154682/9b246758-cb03-4f25-a59d-2fba6bae0389"></p>
 <p align="center">Fig: Culmination of different Exploratory data Analysis performed</p>
+
 - The first segment of the code is to import the Dataset and analyse the Data. Data Analysing is an important process before fitting the data to the model as it helps us understand our data, its structure, and its content.
 - EDA helps us to identify missing values, outliers, and anomalies in your dataset. Cleaning and preparing the data is crucial for accurate analysis.
 - EDA can assist in identifying which features (variables) are relevant for our analysis.
@@ -180,21 +189,23 @@ pip install tensorflow
 
 ### RESULTS:
 
-<p align="center"><img width="250" alt="dataset pic 1" src="https://github.com/ACM40960/project-diwa13/assets/115154682/fed8f367-6158-4402-ac5a-55dc2cf304ce">
+<p align="center"><img width="400" alt="dataset pic 1" src="https://github.com/ACM40960/project-diwa13/assets/115154682/fed8f367-6158-4402-ac5a-55dc2cf304ce">
 </p>
 <p align="center">Fig: Comparison of models based on Accuracy</p>
 
 - We have considered 4 models namely Logistic, Random forest, KNN,DNN.Based on the evaluation of four models (Logistic Regression, Random Forest, K-Nearest Neighbour's, Deep Neural Network), after hyperparameter tuning and fitting the optimised models on balanced data, Logistic Regression emerged as the best-performing model based on accuracy. 
 
-<p align="center"><img width="320" alt="dataset pic 1" src="https://github.com/ACM40960/project-diwa13/assets/115154682/90a65538-8303-4d94-84ce-76c49fb42c59"></p>
+<p align="center"><img width="360" alt="dataset pic 1" src="https://github.com/ACM40960/project-diwa13/assets/115154682/90a65538-8303-4d94-84ce-76c49fb42c59"></p>
 <p align="center">Fig: Evaluation of Logistic Regression based on Precison,F1 score,Recall,Confusion matrix,Roc Curve</p>
-- Subsequently, the evaluation of the Logistic Regression model included the following metrics to gauge its predictive capacity:
-    - Area Under the ROC Curve (AUC):
-    - Sensitivity (True Positive Rate):
-    - Specificity (True Negative Rate):
-    - F1 Score:
 
-- These metrics collectively offer a comprehensive understanding of the model's performance across various aspects. While accuracy is a valuable metric, these additional measures give deeper insights into how well the model performs under different scenarios and classes. Based on the evaluated metrics, the Logistic Regression model's AUC, Sensitivity, Specificity, and F1 Score provide a more nuanced assessment of its predictive capacity.
+
+- Subsequently, the evaluation of the Logistic Regression model included the following metrics to gauge its predictive capacity:
+    - Area Under the ROC Curve (AUC):(0.93)
+    - Recall(True Positive Rate):(0.92)
+    - Precision:(0.82)
+    - F1 Score:(0.86)
+
+- These metrics collectively offer a comprehensive understanding of the model's performance across various aspects. While accuracy is a valuable metric, these additional measures give deeper insights into how well the model performs under different scenarios and classes. Based on the evaluated metrics, the Logistic Regression model's AUC, Sensitivity, Specificity, and F1 Score provide a more nuanced assessment of its predictive capacity. We may thus draw the conclusion that, when compared to other models, logistic regression has greater predictive ability.
   
 ### 💡CONTRIBUTION
 - We encourage contributions to this repository. Feel free to send in a pull request if you have ideas for improved machine learning models, want to fine-tune the hyperparameters, identify any data abnormalities, or want to improve any aspect of the project.
